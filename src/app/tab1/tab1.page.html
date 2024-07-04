@@ -1,17 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title >
+      Gempa Terkini
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" style="text-align: center;">
+  <div id="container" style="margin-top: 50px;">
+    <div>
+      <h1>Informasi Gempa Terbaru</h1>
+      <img src="https://data.bmkg.go.id/DataMKG/TEWS/{{shakemap}}" alt="shakemap" width="300px" style="border-radius: 8px;">
+      <p>Magnitude : {{magnitude}} SR</p>
+      <p>Waktu : {{tanggal}}<span> pada jam {{jam}}</span></p>
+      <p>Wilayah : {{wilayah}}</p>
+      <p>Potensi : {{potensi}}</p>
+      <p>Kedalaman : {{kedalaman}}</p>
+      <p>Dirasakan : {{dirasakan}}</p>
+    </div>
+  </div>
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>

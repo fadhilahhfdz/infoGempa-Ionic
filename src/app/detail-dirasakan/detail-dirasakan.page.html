@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail Gempa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container" style="margin: 50px;">
+    <div>
+      <p>Magnitude : {{gempa.Magnitude}} SR</p>
+      <p>Waktu : {{gempa.Tanggal}}<span> pada jam {{gempa.Jam}}</span></p>
+      <p>Wilayah : {{gempa.Wilayah}}</p>
+      <p>Kedalaman : {{gempa.Kedalaman}}</p>
+      <p>Dirasakan : {{gempa.Dirasakan}}</p>
+    </div>
+  </div>
+
+</ion-content>
