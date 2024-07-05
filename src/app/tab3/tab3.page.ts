@@ -5,13 +5,16 @@ import { NavigationExtras, Router } from '@angular/router';
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+  styleUrls: ['tab3.page.scss'],
 })
 export class Tab3Page implements OnInit {
   public dirasakan: any = {};
   public gempa: any;
 
-  constructor(private infoGempaService: InfoGempaService, private route: Router) {}
+  constructor(
+    private infoGempaService: InfoGempaService,
+    private route: Router
+  ) {}
 
   ngOnInit(): void {
     this.infoGempaService.getGempaDirasakan().subscribe((result) => {
@@ -29,6 +32,9 @@ export class Tab3Page implements OnInit {
       Wilayah: g.Wilayah,
       Kedalaman: g.Kedalaman,
       Dirasakan: g.Dirasakan,
+      Coordinates: g.Coordinates,
+      Lintang: g.Lintang,
+      Bujur: g.Bujur,
     };
     let extras: NavigationExtras = {
       queryParams: {

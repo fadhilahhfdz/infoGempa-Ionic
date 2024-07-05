@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Gempa Dirasakan
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title style="color: white; text-align: center;"> Gempa Dirasakan </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,10 +10,14 @@
       <ion-grid (click)="detailpage(g)">
         <ion-row>
           <ion-col size="7">
-            <p>{{g.Dirasakan}}</p>
+            <ion-text>
+              <p>{{g.Dirasakan}}</p>
+            </ion-text>
           </ion-col>
-          <ion-col size="3.5" style="margin-left: 40px; color: greenyellow;">
-            <p>{{g.Jam}}</p>
+          <ion-col size="4" style="margin-left: 20px">
+            <ion-text color="primary">
+              <p>{{g.Jam}}</p>
+            </ion-text>
           </ion-col>
         </ion-row>
       </ion-grid>
